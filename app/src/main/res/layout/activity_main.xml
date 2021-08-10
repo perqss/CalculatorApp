@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainRelLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/resultRelLayout"
+        style="@style/RelLayoutColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txtResult"
+            style="@style/TextColour"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="76dp"
+            android:background="@android:color/transparent"
+            android:focusable="false"
+            android:maxLines="1"
+            android:textAlignment="textEnd"
+            android:textSize="40sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtStoreResult"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:maxLines="1"
+            android:textColor="@color/grey"
+            android:textSize="20sp"
+            app:autoSizeTextType="uniform" />
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/RelLayoutColor"
+        android:layout_below="@id/resultRelLayout">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMc"
+            style="@style/MButtonStyle"
+            android:text="mc"
+            app:autoSizeTextType="uniform"
+            android:maxLines="1"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal1"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineVert1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMPlus"
+            style="@style/MButtonStyle"
+            android:maxLines="1"
+            android:text="m+"
+            android:textSize="40sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal1"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineVert2"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/guidelineVert1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.333" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMMinus"
+            style="@style/MButtonStyle"
+            android:text="m-"
+            app:autoSizeTextType="uniform"
+            android:maxLines="1"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal1"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineVert3"
+            app:layout_constraintStart_toEndOf="@+id/guidelineVert2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnClear"
+            style="@style/NewButtonStyle"
+            android:text="C"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal2"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineVert1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMr"
+            style="@style/MButtonStyle"
+            android:text="mr"
+            app:autoSizeTextType="uniform"
+            android:maxLines="1"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guidelineVert3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPlusMinus"
+            style="@style/NewButtonStyle"
+            android:text="+/-"
+            android:textSize="40sp"
+            app:autoSizeTextType="uniform"
+            android:maxLines="1"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal2"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineVert2"
+            app:layout_constraintStart_toStartOf="@id/guidelineVert1"
+            app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal1" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/btnBack"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:backgroundTint="@color/not_as_black"
+            style="@style/ic_backspace"
+            android:src="@drawable/ic_backspace"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:cornerRadius="0dp"
+            app:strokeColor="@color/black"
+            app:strokeWidth="2dp"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal2"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineVert3"
+            app:layout_constraintStart_toStartOf="@+id/guidelineVert2"
+            app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDivide"
+            style="@style/OperatorsStyle"
+            android:text="/"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guidelineVert3"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineHorizontal1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSeven"
+            style="@style/NewButtonStyle"
+            android:text="7"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal3"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineVert1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineHorizontal2" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEight"
+            style="@style/NewButtonStyle"
+            android:text="8"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal3"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineVert2"
+            app:layout_constraintStart_toEndOf="@+id/guidelineVert1"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineHorizontal2" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNine"
+            style="@style/NewButtonStyle"
+            android:text="9"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal3"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineVert3"
+            app:layout_constraintStart_toEndOf="@+id/guidelineVert2"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineHorizontal2" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMultiplication"
+            style="@style/OperatorsStyle"
+            android:text="X"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guidelineVert3"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineHorizontal2" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnFour"
+            style="@style/NewButtonStyle"
+            android:text="4"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal4"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineVert1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineHorizontal3" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnFive"
+            style="@style/NewButtonStyle"
+            android:text="5"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal4"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineVert2"
+            app:layout_constraintStart_toStartOf="@+id/guidelineVert1"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineHorizontal3" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSix"
+            style="@style/NewButtonStyle"
+            android:text="6"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal4"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineVert3"
+            app:layout_constraintStart_toStartOf="@+id/guidelineVert2"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineHorizontal3" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMinus"
+            style="@style/OperatorsStyle"
+            android:text="-"
+            android:layout_alignParentTop="true"
+            android:gravity="top|center"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guidelineVert3"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineHorizontal3" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnOne"
+            style="@style/NewButtonStyle"
+            android:text="1"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal5"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineVert1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineHorizontal4" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTwo"
+            style="@style/NewButtonStyle"
+            android:text="2"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal5"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineVert2"
+            app:layout_constraintStart_toStartOf="@+id/guidelineVert1"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineHorizontal4" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnThree"
+            style="@style/NewButtonStyle"
+            android:text="3"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal5"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineVert3"
+            app:layout_constraintStart_toStartOf="@+id/guidelineVert2"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineHorizontal4" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPlus"
+            style="@style/OperatorsStyle"
+            android:text="+"
+            app:layout_constraintBottom_toTopOf="@id/guidelineHorizontal5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guidelineVert3"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineHorizontal4" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPercent"
+            style="@style/NewButtonStyle"
+            android:text="MOD"
+            app:autoSizeTextType="uniform"
+            android:maxLines="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineVert1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineHorizontal5" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnZero"
+            style="@style/NewButtonStyle"
+            android:text="0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineVert2"
+            app:layout_constraintStart_toStartOf="@+id/guidelineVert1"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineHorizontal5" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDot"
+            style="@style/NewButtonStyle"
+            android:text="."
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineVert3"
+            app:layout_constraintStart_toStartOf="@+id/guidelineVert2"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineHorizontal5" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEqual"
+            style="@style/OperatorsStyle"
+            android:text="="
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guidelineVert3"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineHorizontal5" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineVert1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineVert2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineVert3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.75" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineHorizontal1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.16666666666" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineHorizontal2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            app:layout_constraintGuide_percent="0.3333332" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineHorizontal3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineHorizontal4"
+            android:layout_width="wrap_content"
+            android:visibility="visible"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.666666666666" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineHorizontal5"
+            android:layout_width="wrap_content"
+            android:visibility="visible"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.833333333" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

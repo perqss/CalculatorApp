@@ -1,0 +1,83 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Calculator" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="NewButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="materialThemeOverlay">@style/ButtonThemeOverlay</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="maxLines">1</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:textSize">50sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="cornerRadius">0dp</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="strokeColor">@color/black</item>
+    </style>
+
+    <style name="OperatorsStyle" parent="Widget.MaterialComponents.Button">
+        <item name="materialThemeOverlay">@style/OperatorThemeOverlay</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="maxLines">1</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:textSize">50sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="cornerRadius">0dp</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="strokeColor">@color/black</item>
+    </style>
+
+    <style name="MButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="materialThemeOverlay">@style/ButtonThemeOverlay</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="maxLines">1</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="android:textSize">50sp</item>
+        <item name="android:textColor">@color/purple</item>
+        <item name="cornerRadius">0dp</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="strokeColor">@color/black</item>
+    </style>
+
+    <style name="TextColour">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="RelLayoutColor">
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="ic_backspace" type="drawable">
+        <item name="android:tint">@color/black</item>
+    </style>
+
+    <style name="ButtonThemeOverlay">
+        <item name="colorPrimary">@color/white</item>
+    </style>
+
+    <style name="OperatorThemeOverlay">
+        <item name="colorPrimary">@color/orange</item>
+    </style>
+
+</resources>
